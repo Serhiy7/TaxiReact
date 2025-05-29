@@ -1,0 +1,46 @@
+.newsReviewsSection
+  background-color: var(--color-tertiary)
+  display: flex
+  flex-wrap: wrap
+  gap: 40px
+  padding: 60px 20px
+
+  @media (max-width: 768px)
+    flex-direction: column
+    gap: 20px
+    padding: 40px 20px
+
+.newsList, .reviewsList
+  flex: 1
+  min-width: 300px
+  
+  h2
+    font-size: 1.8rem
+    margin-bottom: 20px
+    color: var(--color-secondary)
+
+.newsItem, .reviewItem
+  background: var(--color-dark)
+  border-radius: 8px
+  box-shadow: 0 2px 5px var(--color-shadow)
+  padding: 20px
+  margin-bottom: 20px
+  transition: all 0.3s ease
+  
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7)
+  
+  h3
+    font-size: 1.2rem
+    margin-bottom: 10px
+    color: var(--color-primary)
+  
+  p
+    font-size: 1rem
+    margin-bottom: 10px
+    line-height: 1.4
+    color: #ccc
+  
+  small
+    color: #777

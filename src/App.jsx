@@ -5,6 +5,7 @@ import Hero from "./components/HomePage/Hero/Hero";
 import Advantages from "./components/HomePage/Advantages/Advantages";
 import VehicleFleet from "./components/VehicleFleet/VehicleFleet";
 import VideosOnYouTube from "./components/VideosOnYouTube/VideosOnYouTube";
+import NewsReviewsSection from "./components/NewsReviewsSection/NewsReviewsSection";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Hero />
         <Advantages />
         <VehicleFleet />
+        <NewsReviewsSection />
         <VideosOnYouTube />
       </div>
       <Footer />

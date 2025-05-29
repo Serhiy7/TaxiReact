@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import styles from "./Header.module.sass";
 
 const Header = () => {
@@ -11,7 +12,11 @@ const Header = () => {
 
         <nav className={styles.navMenu}>
           <div className={styles.navLinks}>
-            <a href="#hero" className={styles.navLink}>
+              <Link to="/">Главная</Link>
+            <Link to="/news">Новости</Link>
+            <Link to="/cars">Автопарк</Link>
+            <Link to="/videos">Видео</Link>
+            {/* <a href="#hero" className={styles.navLink}>
               Главная
             </a>
             <a href="#autopark" className={styles.navLink}>
@@ -25,7 +30,7 @@ const Header = () => {
             </a>
             <a href="#footer" className={styles.navLink}>
               Контакты
-            </a>
+            </a> */}
 
             <div className={styles.dropdown}>
               {/* <button className={styles.dropbtn}>Документы ▼</button> */}

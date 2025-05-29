@@ -1,6 +1,6 @@
 import VideosOnYouTube from "../../components/VideosOnYouTube/VideosOnYouTube";
 
 const Videos = () => {
-  returtn(<VideosOnYouTube />);
+  return <VideosOnYouTube />;
 };
 export default Videos;

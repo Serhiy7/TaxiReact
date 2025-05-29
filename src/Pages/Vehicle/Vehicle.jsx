@@ -1,6 +1,6 @@
 import VehicleFleet from "../../components/VehicleFleet/VehicleFleet";
 
 const Vehicle = () => {
-  returnt(<VehicleFleet />);
+  return <VehicleFleet />;
 };
 export default Vehicle;

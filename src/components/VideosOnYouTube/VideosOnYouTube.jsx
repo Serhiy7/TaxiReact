@@ -1,32 +1,45 @@
 import styles from "./VideosOnYouTube.module.sass";
 
+/**
+ * Top 5 Miyagi tracks in embedded YouTube iframes
+ * @component
+ * @returns {JSX.Element}
+ */
 const VideosOnYouTube = () => {
   const videos = [
     {
-      id: "WzQBAc8i73E", // Miyagi & Эндшпиль feat. Рем Дигга - I Got Love (Official Video)
-      title: "Miyagi & Эндшпиль feat. Рем Дигга - I Got Love (Official Video)",
+      id: "WzQBAc8i73E", // I Got Love
+      title: "Miyagi & Эндшпиль feat. Рем Дигга – I Got Love",
     },
     {
-      id: "KlyXNRrsk4A", // Benassi Bros Feat. Dhany - Every Single Day [Official Video HD]
-      title: "Benassi Bros Feat. Dhany - Every Single Day [Official Video HD]",
+      id: "WENR1e5yaXA", // Captain
+      title: "Miyagi – Captain (Official Video)",
     },
     {
-      id: "Xd7wuXxi7Vk", // Benny Benassi - Satisfaction
-      title: "Benny Benassi - Satisfaction",
+      id: "MNBcIBnU3a8", // Samurai
+      title: "Miyagi – Samurai (Official Video)",
+    },
+    {
+      id: "9Ri7TcukAJ8", // YAMAKASI
+      title: "Miyagi – YAMAKASI (Official Video)",
+    },
+    {
+      id: "yeBvVvH4tfM", // Freeman
+      title: "Miyagi – Freeman (Official Video)",
     },
   ];
 
   return (
     <section className={styles.videoSection} id="video">
       <h2>Наша музыкальная подборка</h2>
-      <h3>Лучшие треки Benny Benassi:</h3>
+      <h3>ТОП-5 песен Miyagi:</h3>
 
       <div className={styles.videoWrapper}>
         <iframe
           width="100%"
           height="500"
-          src={`https://www.youtube.com/embed/${videos[2].id}`}
-          title={videos[2].title}
+          src={`https://www.youtube.com/embed/${videos[0].id}`}
+          title={videos[0].title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -34,7 +47,7 @@ const VideosOnYouTube = () => {
       </div>
 
       <div className={styles.smallVideos}>
-        {videos.map((video) => (
+        {videos.slice(1).map((video) => (
           <div key={video.id} className={styles.smallVideoWrapper}>
             <iframe
               width="100%"

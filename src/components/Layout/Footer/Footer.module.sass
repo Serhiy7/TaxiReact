@@ -1,0 +1,62 @@
+
+.footer
+  background-color: var(--color-tertiary)
+  padding: 20px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  color: var(--color-primary)
+
+.footerLeft, .footerRight
+  flex: 1 1 300px
+  margin: 10px
+
+.title
+  font-size: 1.2rem
+  margin-bottom: 10px
+
+.contact, .info
+  font-size: 1rem
+  margin-bottom: 10px
+
+.copyright
+  font-size: 0.9rem
+  color: #777
+
+.link
+  color: var(--color-action)
+  text-decoration: none
+  margin: 0 5px
+  transition: var(--transition)
+  &:hover
+    color: var(--color-secondary)
+
+.socialIcons
+  display: flex
+  justify-content: flex-end
+  gap: 15px
+  margin-bottom: 10px
+
+.socialLink
+  color: var(--color-action)
+  transition: var(--transition)
+  font-size: 1.5rem
+  &:hover
+    color: var(--color-secondary)
+
+// Dark theme styles
+.darkTheme
+  .footer
+    background-color: var(--color-tertiary)
+
+// Mobile responsiveness
+@media (max-width: 768px)
+  .footer
+    flex-direction: column
+    text-align: center
+  .footerLeft, .footerRight
+    text-align: center
+    max-width: 100%
+  .socialIcons
+    justify-content: center

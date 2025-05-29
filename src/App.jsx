@@ -1,8 +1,14 @@
-import Header from './components/Layout/Header/Header'
+import { Header, Footer } from "./components/Layout";
 import "./App.css";
 
 function App() {
-  return <><Header/></>;
+  return (
+    <>
+      <Header />
+
+      <Footer />
+    </>
+  );
 }
 
 export default App;

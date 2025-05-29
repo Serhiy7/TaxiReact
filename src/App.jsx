@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import { Header, Footer } from "./components/Layout";
 import "./App.css";
 import Hero from "./components/HomePage/Hero/Hero";
@@ -9,13 +10,18 @@ function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <Advantages />
-      <VehicleFleet />
-      <VideosOnYouTube />
+      <div className="main-container">
+        <Hero />
+        <Advantages />
+        <VehicleFleet />
+        <VideosOnYouTube />
+      </div>
       <Footer />
     </>
   );
 }
 
 export default App;
+{
+  /* <Route path="/" element={<Home />} /> */
+}

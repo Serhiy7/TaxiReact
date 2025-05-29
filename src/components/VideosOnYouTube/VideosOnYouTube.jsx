@@ -7,12 +7,12 @@ const VideosOnYouTube = () => {
       title: "Benny Benassi - Satisfaction",
     },
     {
-      id: "KlyXNRrsk4A", // Benny Benassi - Cinema (Skrillex Remix)
-      title: "Benny Benassi - Cinema",
+      id: "KlyXNRrsk4A", // Benassi Bros Feat. Dhany - Every Single Day [Official Video HD]
+      title: "Benassi Bros Feat. Dhany - Every Single Day [Official Video HD]",
     },
     {
-      id: "WzQBAc8i73E", // Benny Benassi - Who's Your Daddy
-      title: "Benny Benassi - Who's Your Daddy",
+      id: "WzQBAc8i73E", // Miyagi & Эндшпиль feat. Рем Дигга - I Got Love (Official Video)
+      title: "Miyagi & Эндшпиль feat. Рем Дигга - I Got Love (Official Video)",
     },
   ];
 
@@ -23,7 +23,7 @@ const VideosOnYouTube = () => {
 
       <div className={styles.videoWrapper}>
         <iframe
-          src="https://www.youtube.com/embed/KlyXNRrsk4A" // Cinema - основной трек
+          src="https://www.youtube.com/embed/a0fkNdPiIL4" // Benny Benassi - Cinema (Skrillex Remix)
           title="Benny Benassi - Cinema (Skrillex Remix)"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen

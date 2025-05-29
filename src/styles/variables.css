@@ -1,0 +1,11 @@
+:root {
+  --color-primary: #f8f8f8;
+  --color-secondary: #3fd10f;
+  --color-tertiary: #1a1a1a;
+  --color-action: #3fd10f;
+  --color-white: #fff;
+  --color-dark: #333;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-accent: #e74c3c;
+  --transition: all 0.3s ease;
+}

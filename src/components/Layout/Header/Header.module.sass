@@ -1,0 +1,94 @@
+// Переменные можно подключить отдельно (например, в variables.sass)
+// Здесь будем считать, что они уже доступны через :root в глобальных стилях
+
+.header
+  position: fixed
+  top: 0
+  width: 100%
+  padding: 10px 0
+  z-index: 1000
+  background: transparent
+  transition: background 0.3s ease, box-shadow 0.3s ease
+
+  &.scrolled
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5)
+
+.headerContainer
+  max-width: 1200px
+  margin: 0 auto
+  padding: 0 2rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.logo
+  line-height: 1.1
+  font-family: "Arial", sans-serif
+  font-size: 1.8rem
+  font-weight: 700
+  letter-spacing: 1.5px
+  color: var(--color-primary)
+
+.logoPrimary
+  color: var(--color-primary)
+
+.logoAccent
+  color: var(--color-secondary)
+
+.navMenu
+  display: flex
+  align-items: center
+
+.navLinks
+  font-size: 19px
+  display: flex
+  gap: 2rem
+  align-items: center
+
+.navLink
+  position: relative
+  padding: 0.5rem 1rem
+  transition: var(--transition)
+  color: var(--color-primary)
+  text-decoration: none
+
+  &:hover
+    color: var(--color-secondary)
+
+  &::after
+    content: ""
+    position: absolute
+    bottom: -5px
+    left: 0
+    width: 0
+    height: 2px
+    background-color: var(--color-secondary)
+    transition: var(--transition)
+
+  &:hover::after
+    width: 100%
+
+.mobileMenuBtn
+  display: none
+  flex-direction: column
+  gap: 4px
+  cursor: pointer
+
+  span
+    width: 25px
+    height: 2px
+    background: var(--color-primary)
+    transition: var(--transition)
+
+@media (max-width: 1024px)
+  .navLinks
+    display: none
+
+  .mobileMenuBtn
+    display: flex
+
+  .headerContainer
+    padding: 0 1rem
+
+  .logo
+    font-size: 1.5rem

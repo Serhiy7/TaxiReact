@@ -1,0 +1,119 @@
+
+
+.section
+  padding: 60px 20px
+  h2
+    text-align: center
+    font-size: 2rem
+    position: relative
+
+.carH2
+  padding: 60px 0 20px
+
+#autopark
+  position: relative
+  background: rgb(255, 254, 254)
+  padding: 20px
+
+.autopark-grid
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+  gap: 20px
+
+.car-card
+  border: 2px solid var(--color-secondary)
+  background: var(--color-dark)
+  border-radius: 8px
+  box-shadow: 0 2px 5px var(--color-shadow)
+  padding: 20px
+  display: flex
+  flex-direction: column
+  transition: var(--transition)
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 5px 15px var(--color-secondary)
+
+.car-image
+  width: 100%
+  height: 180px
+  overflow: hidden
+  border-radius: 5px
+  margin-bottom: 15px
+  img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    transition: transform 0.4s
+  .car-card:hover &
+    img
+      transform: scale(1.05)
+
+.car-title
+  font-size: 1.1rem
+  font-weight: 700
+  margin-bottom: 10px
+  color: var(--color-primary)
+
+.car-price, .car-deposit
+  font-size: 1rem
+  font-weight: 500
+  color: var(--color-secondary)
+  margin-bottom: 10px
+
+.car-description, .car-dates
+  font-size: 0.9rem
+  margin-bottom: 15px
+  color: var(--color-primary)
+
+.car-actions
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: auto
+
+.btn-rent
+  background-color: var(--color-secondary)
+  color: var(--color-tertiary)
+  padding: 10px 20px
+  border-radius: 4px
+  font-weight: 600
+  transition: var(--transition)
+  &:hover
+    background-color: darken(#3fd10f, 10%)
+    transform: translateY(-3px)
+
+.news-reviews-section
+  background-color: var(--color-tertiary)
+  display: flex
+  flex-wrap: wrap
+  gap: 40px
+  padding: 60px 20px
+
+.news-list, .reviews-list
+  flex: 1
+  min-width: 300px
+
+.news-item, .review-item
+  background: var(--color-dark)
+  border-radius: 8px
+  box-shadow: 0 2px 5px var(--color-shadow)
+  padding: 20px
+  margin-bottom: 20px
+  transition: var(--transition)
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7)
+
+.news-item h3, .review-item h3
+  font-size: 1.2rem
+  margin-bottom: 10px
+  color: var(--color-primary)
+
+.news-item p, .review-item p
+  font-size: 1rem
+  margin-bottom: 10px
+  line-height: 1.4
+  color: #ccc
+
+.news-item small, .review-item small
+  color: #777

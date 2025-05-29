@@ -1,7 +1,8 @@
 import { Header, Footer } from "./components/Layout";
 import "./App.css";
-import Hero from "./components/Hero/Hero";
-import Advantages from "./components/Advantages/Advantages";
+import Hero from "./components/HomePage/Hero/Hero";
+import Advantages from "./components/HomePage/Advantages/Advantages";
+import VehicleFleet from "./components/VehicleFleet/VehicleFleet";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Hero />
       <Advantages />
+      <VehicleFleet />
       <Footer />
     </>
   );

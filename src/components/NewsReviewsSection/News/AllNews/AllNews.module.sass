@@ -1,0 +1,171 @@
+.allNews
+  background-color: var(--color-dark)
+  padding: 3rem 2rem
+  color: var(--color-light)
+  font-family: "Inter", sans-serif
+  width: 100%
+  margin: 0
+  box-sizing: border-box
+
+.title
+  text-align: center
+  margin-bottom: 2.5rem
+  font-size: 2.5rem
+  color: var(--color-accent)
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-tertiary))
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  display: inline-block
+
+.newsList
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
+  gap: 2rem
+  width: 100%
+  margin: 0 auto
+
+.newsItem
+  background: linear-gradient(145deg, var(--color-dark-tertiary), var(--color-dark-secondary))
+  border: 1px solid rgba(63, 209, 15, 0.3)
+  border-radius: var(--radius-lg)
+  padding: 1.5rem
+  box-shadow: var(--shadow-md)
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal)
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: var(--shadow-lg)
+
+.newsImage
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+
+
+.newsContent
+  h3
+    margin: 0 0 0.5rem 0
+    font-size: 1.5rem
+    color: var(--color-accent)
+  p
+    margin: 0 0 1rem 0
+    line-height: 1.6
+
+.newsMeta
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 1rem
+
+.date
+  color: var(--color-light-secondary)
+  font-size: 0.9rem
+
+.backButton
+  background: rgba(63, 209, 15, 0.1)
+  color: var(--color-accent)
+  border: 1px solid var(--color-accent)
+  cursor: pointer
+  font-size: 1rem
+  font-weight: 600
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.5rem
+  transition: all var(--transition-normal)
+  padding: 0.75rem 1.5rem
+  border-radius: var(--radius-sm)
+  margin-bottom: 1.5rem
+  text-transform: uppercase
+  letter-spacing: 1px
+  &:hover
+    background: rgba(63, 209, 15, 0.2)
+    color: var(--color-accent-tertiary)
+    transform: translateY(-2px)
+    box-shadow: var(--shadow-sm)
+
+.readMoreBtn
+  background: transparent
+  border: 1px solid var(--color-accent)
+  color: var(--color-accent)
+  padding: 0.75rem 1.5rem
+  border-radius: var(--radius-sm)
+  cursor: pointer
+  transition: all var(--transition-normal)
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: 1px
+  &:hover
+    background: var(--color-accent)
+    color: var(--color-dark)
+    box-shadow: var(--shadow-sm)
+
+.item
+  display: flex
+  flex-direction: column
+  border-radius: var(--radius-lg)
+  overflow: hidden
+  box-shadow: var(--shadow-sm)
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal)
+  background: var(--color-dark-tertiary)
+  color: var(--color-light)
+  margin-bottom: 1.5rem
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: var(--shadow-md)
+
+.image
+  width: 100%;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-dark-secondary);
+  padding: 1rem;
+  svg
+    width: 100%
+    height: 100%
+    max-width: 120px
+    color: var(--color-accent)
+    transition: transform var(--transition-normal)
+
+.content
+  padding: 1rem
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+  h4
+    margin: 0 0 0.5rem 0
+    font-size: 1.2rem
+    color: var(--color-light)
+  p
+    margin: 0 0 1rem 0
+    color: var(--color-light-secondary)
+    font-size: 1rem
+    flex-grow: 1
+
+.meta
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: auto
+  .date
+    font-size: 0.8rem
+    color: var(--color-light-secondary)
+
+.readMoreBtn
+  background: none
+  border: none
+  color: var(--color-accent)
+  cursor: pointer
+  font-size: 0.9rem
+  padding: 0.5rem 1rem
+  border-radius: var(--radius-sm)
+  border: 1px solid var(--color-accent)
+  transition: all var(--transition-normal)
+  &:hover
+    background: rgba(63, 209, 15, 0.1)
+    color: var(--color-accent-tertiary)
+    transform: translateY(-2px)
+    box-shadow: var(--shadow-sm)

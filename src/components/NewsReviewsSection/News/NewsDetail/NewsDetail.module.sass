@@ -1,0 +1,242 @@
+.newsDetail
+  background-color: var(--color-dark)
+  padding: 3rem 2rem
+  color: var(--color-light)
+  font-family: "Inter", sans-serif
+  max-width: 900px
+  margin: 2rem auto
+  border-radius: var(--radius-lg)
+  box-shadow: var(--shadow-lg)
+  border: 1px solid rgba(63, 209, 15, 0.1)
+
+.title
+  text-align: center
+  margin-bottom: 2rem
+  font-size: 2.5rem
+  color: var(--color-accent)
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-tertiary))
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  display: inline-block
+
+.meta
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 1rem
+  margin-bottom: 1.5rem
+  font-size: 0.95rem
+  color: var(--color-light-secondary)
+
+.metaInfo
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 1.5rem
+  padding-bottom: 1rem
+  border-bottom: 1px solid rgba(63, 209, 15, 0.2)
+
+  .date, .type, .tag
+    color: var(--color-light-secondary)
+    font-size: 0.9rem
+
+.tag
+  margin-left: 0.5rem
+
+.type, .date
+  opacity: 0.8
+
+
+.mainImage
+  width: 100%
+  height: 250px
+  object-fit: cover
+  border-radius: var(--radius-md)
+  margin-bottom: 2rem
+  box-shadow: var(--shadow-md)
+
+.content
+  font-size: 1.2rem
+  line-height: 1.8
+  margin-bottom: 2rem
+
+  .paragraph
+      margin-bottom: 1rem
+  color: var(--color-light)
+  line-height: 1.7
+
+  .bulletPoint
+    display: block
+    margin-bottom: 0.5rem
+
+.gallery
+  margin-top: 3rem
+
+  h3
+    font-size: 1.5rem
+    margin-bottom: 1rem
+    color: var(--color-accent)
+
+.galleryGrid
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+  gap: 1rem
+  margin-top: 1rem
+
+
+.galleryImages
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+  gap: 1rem
+  margin-top: 1rem
+
+  img
+    width: 100%
+    height: 180px
+    object-fit: cover
+    border-radius: var(--radius-sm)
+    box-shadow: var(--shadow-sm)
+    transition: transform 0.3s ease
+
+    &:hover
+      transform: scale(1.03)
+
+
+.galleryImage
+  width: 100%
+  height: 180px
+  object-fit: cover
+  border-radius: var(--radius-sm)
+  box-shadow: var(--shadow-sm)
+
+.actions
+  display: flex
+  justify-content: space-between
+  margin-top: 2rem
+
+.backButton, .secondaryButton, .scrollToTop
+  background: rgba(63, 209, 15, 0.1)
+  color: var(--color-accent)
+  border: 1px solid var(--color-accent)
+  cursor: pointer
+  font-size: 1rem
+  font-weight: 600
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.5rem
+  transition: all var(--transition-normal)
+  padding: 0.75rem 1.5rem
+  border-radius: var(--radius-sm)
+  text-transform: uppercase
+  letter-spacing: 1px
+
+  &:hover
+    background: rgba(63, 209, 15, 0.2)
+    color: var(--color-accent-tertiary)
+    transform: translateY(-3px)
+    box-shadow: var(--shadow-md)
+
+.notFound
+  text-align: center
+  padding: 2rem
+  color: var(--color-light)
+
+  h2
+    font-size: 2rem
+    margin-bottom: 1rem
+
+  p
+    margin-bottom: 2rem
+
+  button
+    background: rgba(63, 209, 15, 0.1)
+    color: var(--color-accent)
+    border: 1px solid var(--color-accent)
+    cursor: pointer
+    font-size: 1rem
+    font-weight: 600
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+    transition: all var(--transition-normal)
+    padding: 0.75rem 1.5rem
+    border-radius: var(--radius-sm)
+    margin: 0 auto
+
+    &:hover
+      background: rgba(63, 209, 15, 0.2)
+      color: var(--color-accent-tertiary)
+      transform: translateY(-3px)
+      box-shadow: var(--shadow-md)
+
+
+.tags
+  margin-top: 2rem
+  display: flex
+  flex-wrap: wrap
+  gap: 0.5rem
+
+.tag
+  background-color: rgba(63, 209, 15, 0.1)
+  color: var(--color-accent)
+  padding: 0.3rem 0.75rem
+  border-radius: var(--radius-sm)
+  font-size: 0.85rem
+  font-weight: 500
+
+.backButton
+  background: rgba(63, 209, 15, 0.1)
+  color: var(--color-accent)
+  border: 1px solid var(--color-accent)
+  cursor: pointer
+  font-size: 1rem
+  font-weight: 600
+  display: flex
+  align-items: center
+  gap: 0.5rem
+  transition: all var(--transition-normal)
+  padding: 0.5rem 1rem
+  border-radius: var(--radius-sm)
+  margin-bottom: 2rem
+
+  &:hover
+    background: rgba(63, 209, 15, 0.2)
+    color: var(--color-accent-tertiary)
+    transform: translateY(-2px)
+    box-shadow: var(--shadow-md)
+
+.notFound
+  text-align: center
+  padding: 2rem
+  color: var(--color-light)
+
+  h2
+    font-size: 2rem
+    margin-bottom: 1rem
+
+  p
+    margin-bottom: 2rem
+
+  button
+    background: rgba(63, 209, 15, 0.1)
+    color: var(--color-accent)
+    border: 1px solid var(--color-accent)
+    cursor: pointer
+    font-size: 1rem
+    font-weight: 600
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 0.5rem
+    transition: all var(--transition-normal)
+    padding: 0.75rem 1.5rem
+    border-radius: var(--radius-sm)
+    margin: 0 auto
+
+    &:hover
+      background: rgba(63, 209, 15, 0.2)
+      color: var(--color-accent-tertiary)
+      transform: translateY(-3px)
+      box-shadow: var(--shadow-md)

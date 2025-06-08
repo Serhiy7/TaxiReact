@@ -1,54 +1,215 @@
 /* App.css */
 :root {
+  /* Размеры */
   --header-height: 80px;
   --header-height-mobile: 60px;
   --footer-height: 70px;
+
+  /* Цветовая схема */
+  --color-dark: #0a0a0a;
+  --color-dark-secondary: #1a1a1a;
+  --color-dark-tertiary: #1e1e1e;
+  --color-light: #f8f8f8;
+  --color-light-secondary: rgba(248, 248, 248, 0.8);
+  --color-accent: #3fd10f;
+  --color-accent-secondary: #1fd10f;
+  --color-accent-tertiary: #8ef77b;
+  --color-shadow: rgba(0, 0, 0, 0.25);
+
+  /* Тени */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-accent: 0 0 15px rgba(63, 209, 15, 0.5);
+
+  /* Скругления */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 50px;
+
+  /* Анимации */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-bounce: cubic-bezier(0.2, 0.8, 0.4, 1);
 }
-/* Добавьте это в самый верх App.css */
-body {
-  --header-height: 80px;
-  --header-height-mobile: 60px;
-  --footer-height: 70px;
+
+/* Базовые стили */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.main-container {
-  padding-top: 90px; /* 80px шапка + 10px отступ */
-  /* Основные стили */
-  padding-top: var(--header-height);
-  min-height: calc(100vh - var(--footer-height));
-
-  /* Плавные переходы для адаптива */
-  transition: padding-top 0.3s ease;
-
-  /* Оптимальные отступы по бокам */
-  padding-inline: clamp(1rem, 5vw, 3rem);
-
-  /* Улучшенная система выравнивания контента */
-  display: grid;
-  grid-template-rows: auto 1fr;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* Адаптив для мобильных устройств */
-@media (max-width: 768px) {
-  .main-container {
-    padding-top: 70px; /* 60px шапка + 10px отступ */
-    padding-top: var(--header-height-mobile);
-    padding-inline: clamp(0.75rem, 3vw, 1.5rem);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Типография */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0.75em;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-tertiary);
+}
+
+/* Основной контейнер */
+.main-container {
+  padding-top: calc(var(--header-height) + 10px);
+  min-height: calc(100vh - var(--footer-height));
+  padding-inline: clamp(1rem, 5vw, 3rem);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  transition: padding-top var(--transition-normal);
+  background-color: var(--color-dark-secondary);
+  position: relative;
+}
+
+/* Секции */
+section {
+  padding: 4rem 0;
+  position: relative;
+}
+
+/* Кнопки */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition-normal);
+}
+
+/* Формы */
+input,
+textarea,
+select {
+  font-family: inherit;
+  background-color: var(--color-dark-tertiary);
+  border: 1px solid rgba(63, 209, 15, 0.3);
+  color: var(--color-light);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-normal);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(63, 209, 15, 0.2);
+}
+
+/* Утилиты */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-inline: clamp(1rem, 5vw, 2rem);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
-/* Для устройств с большой высотой (например, некоторые смартфоны) */
+.fade-in {
+  animation: fadeIn var(--transition-slow) forwards;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .main-container {
+    padding-top: calc(var(--header-height-mobile) + 10px);
+    padding-inline: clamp(0.75rem, 3vw, 1.5rem);
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}
+
 @media (max-height: 700px) and (max-width: 768px) {
   .main-container {
-    padding-top: calc(var(--header-height-mobile) - 10px);
+    padding-top: var(--header-height-mobile);
   }
 }
 
 /* Поддержка prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
-  .main-container {
-    transition: none;
+  html {
+    scroll-behavior: auto;
   }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Кастомный скроллбар */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-tertiary);
 }

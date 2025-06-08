@@ -1,56 +1,101 @@
-/* NewsReviewsSection.module.sass */
+// NewsReviewsSection.module.sass
 
 .newsReviewsSection
-  background-color: #0a0a0a
-  padding: 3rem 2rem
-  border-radius: 12px
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%)
+  padding: 5rem 2rem
+  border-radius: 16px
   margin: 2rem auto
-  max-width: 1200px
+  max-width: 1400px
   font-family: "Inter", sans-serif
-  color: #f8f8f8 /* Устанавливаем белый цвет текста для всего секции */
+  color: #f8f8f8
+  position: relative
+  overflow: hidden
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25)
+  border: 1px solid rgba(63, 209, 15, 0.1)
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 5px
+    background: linear-gradient(90deg, #3fd10f, #1fd10f)
 
 .sectionHeader
   text-align: center
-  margin-bottom: 2rem
+  margin-bottom: 3rem
+  position: relative
+  z-index: 2
 
   h2
-    font-size: 2rem
-    margin-bottom: 1rem
-    position: relative
+    font-size: 2.5rem
+    font-weight: 700
+    margin-bottom: 1.5rem
+    background: linear-gradient(90deg, #3fd10f, #8ef77b)
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
     display: inline-block
+    position: relative
 
     &::after
       content: ''
       position: absolute
-      bottom: -8px
+      bottom: -12px
       left: 50%
       transform: translateX(-50%)
-      width: 80px
+      width: 100px
       height: 4px
       background: linear-gradient(90deg, #3fd10f, #1fd10f)
-      border-radius: 2px
+      border-radius: 4px
+      box-shadow: 0 0 15px rgba(63, 209, 15, 0.5)
 
 .sectionSubtitle
-  font-size: 1.1rem
-  margin: 0 auto
+  font-size: 1.2rem
+  line-height: 1.6
   max-width: 700px
+  margin: 0 auto
+  color: rgba(248, 248, 248, 0.8)
+  position: relative
 
 .contentWrapper
-  display: flex
-  gap: 2rem
-  margin: 0 auto
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 2.5rem
+  margin: 0 auto 4rem
+  position: relative
+  z-index: 2
 
   @media (max-width: 1024px)
-    flex-direction: column
+    grid-template-columns: 1fr
 
 .newsList, .reviewsList
-  flex: 1
+  background: rgba(30, 30, 30, 0.6)
+  backdrop-filter: blur(10px)
+  border-radius: 16px
+  padding: 2rem
+  border: 1px solid rgba(63, 209, 15, 0.15)
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1)
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
+
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4)
+    border-color: rgba(63, 209, 15, 0.3)
 
 .sectionTitle
   display: flex
   justify-content: space-between
   align-items: center
-  margin-bottom: 1.5rem
+  margin-bottom: 2rem
+  padding-bottom: 1rem
+  border-bottom: 1px solid rgba(63, 209, 15, 0.2)
+
+  h3
+    font-size: 1.5rem
+    font-weight: 600
+    margin: 0
+    color: #f8f8f8
 
 .viewAllBtn
   background: none
@@ -58,115 +103,181 @@
   color: #3fd10f
   cursor: pointer
   font-size: 1rem
+  font-weight: 600
+  display: flex
+  align-items: center
+  gap: 0.5rem
+  transition: all 0.3s ease
+  padding: 0.5rem 0
 
-.newsItem, .reviewItem
+  &::after
+    content: '→'
+    transition: transform 0.3s ease
+
+  &:hover
+    color: #8ef77b
+
+    &::after
+      transform: translateX(4px)
+
+.featuredItem
   background: linear-gradient(145deg, #1e1e1e, #1a1a1a)
-  border: 1px solid rgba(63, 209, 15, 0.3)
+  border: 1px solid rgba(63, 209, 15, 0.2)
   border-radius: 12px
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
   padding: 1.5rem
   margin-bottom: 1.5rem
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1)
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1)
 
   &:hover
-    transform: translateY(-10px)
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4)
-    border-color: rgba(63, 209, 15, 0.6)
+    transform: translateY(-8px)
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3)
+    border-color: rgba(63, 209, 15, 0.4)
 
-.newsImage
+.featuredItem .newsImage, .featuredItem .image
   width: 100%
-  height: 180px
+  height: 200px
   object-fit: cover
-  border-radius: 8px
+  border-radius: var(--radius-md)
   margin-bottom: 1rem
-
-.newsContent h4, .reviewHeader h4
-  margin: 0 0 0.5rem 0
-  font-size: 1.25rem
-
-.newsMeta
-  display: flex
-  justify-content: space-between
-  align-items: center
-  margin-top: 1rem
-
-.date
-  font-size: 0.9rem
-
-.readMoreBtn
-  background: none
-  border: none
-  color: #3fd10f
-  cursor: pointer
-  font-size: 0.9rem
-
-.reviewHeader
-  display: flex
-  align-items: center
-  margin-bottom: 1rem
-
-.avatar
-  width: 50px
-  height: 50px
-  border-radius: 50%
-  margin-right: 1rem
-  object-fit: cover
-
-.rating
-  color: #f1c40f
-  margin: 0.5rem 0
-
-.starFilled, .starEmpty
-  font-size: 1rem
-
-.reviewFooter
-  display: flex
-  justify-content: space-between
-  margin-top: 1rem
-  font-size: 0.9rem
+  display: block
 
 .statsSection
-  margin-top: 3rem
-  text-align: center
+  background: rgba(20, 20, 20, 0.7)
+  backdrop-filter: blur(10px)
+  border-radius: 16px
+  padding: 3rem 2rem
+  margin: 4rem auto
+  border: 1px solid rgba(63, 209, 15, 0.1)
+  position: relative
+  overflow: hidden
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSg2MywgMjA5LCAxNSwgMC4wMykiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')
 
 .statsTitle
+  font-size: 1.8rem
+  font-weight: 600
   margin-bottom: 2rem
+  text-align: center
+  color: #f8f8f8
+  position: relative
+  z-index: 2
 
 .statsGrid
-  display: flex
-  justify-content: space-around
-  flex-wrap: wrap
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  gap: 2rem
+  max-width: 1200px
+  margin: 0 auto
+  position: relative
+  z-index: 2
+
+  @media (max-width: 768px)
+    grid-template-columns: repeat(2, 1fr)
+
+  @media (max-width: 480px)
+    grid-template-columns: 1fr
 
 .statItem
-  margin: 1rem
-  text-align: center
-
-.statValue
-  display: block
-  font-size: 1.5rem
-  margin-bottom: 0.5rem
-
-.statLabel
-  color: #b3b3b3
-
-.ctaSection
-  text-align: center
-  margin-top: 3rem
-  padding: 2rem
-  background: linear-gradient(145deg, #1e1e1e, #1a1a1a)
+  background: rgba(30, 30, 30, 0.6)
   border-radius: 12px
-  border: 1px solid rgba(63, 209, 15, 0.3)
-
-.ctaButton
-  background: #3fd10f
-  color: #1a1a1a
-  border: none
-  padding: 0.75rem 1.5rem
-  font-size: 1rem
-  border-radius: 4px
-  cursor: pointer
-  margin-top: 1rem
-  transition: background 0.3s ease
+  padding: 1.5rem
+  border: 1px solid rgba(63, 209, 15, 0.1)
+  transition: all 0.3s ease
+  backdrop-filter: blur(5px)
 
   &:hover
-    background: #2e9a0a
+    transform: translateY(-5px)
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2)
+    border-color: rgba(63, 209, 15, 0.3)
+
+.statValue
+  font-size: 2.5rem
+  font-weight: 700
+  margin-bottom: 0.5rem
+  background: linear-gradient(135deg, #3fd10f, #8ef77b)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  display: inline-block
+
+.statLabel
+  font-size: 1rem
+  color: rgba(248, 248, 248, 0.7)
+  line-height: 1.5
+
+.ctaSection
+  background: linear-gradient(135deg, rgba(30, 30, 30, 0.8), rgba(26, 26, 26, 0.9))
+  border-radius: 16px
+  padding: 3rem 2rem
+  text-align: center
+  margin-top: 4rem
+  border: 1px solid rgba(63, 209, 15, 0.2)
+  position: relative
+  overflow: hidden
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25)
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 5px
+    background: linear-gradient(90deg, #3fd10f, #1fd10f)
+
+  h3
+    font-size: 1.8rem
+    font-weight: 600
+    margin-bottom: 1rem
+    color: #f8f8f8
+
+  p
+    font-size: 1.1rem
+    color: rgba(248, 248, 248, 0.8)
+    max-width: 600px
+    margin: 0 auto 2rem
+    line-height: 1.6
+
+.ctaButton
+  background: linear-gradient(135deg, #3fd10f, #1fd10f)
+  color: #0a0a0a
+  border: none
+  padding: 1rem 2.5rem
+  font-size: 1.1rem
+  font-weight: 600
+  border-radius: 50px
+  cursor: pointer
+  transition: all 0.3s ease
+  position: relative
+  overflow: hidden
+  box-shadow: 0 5px 15px rgba(63, 209, 15, 0.3)
+  text-transform: uppercase
+  letter-spacing: 1px
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0))
+    opacity: 0
+    transition: opacity 0.3s ease
+
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 10px 25px rgba(63, 209, 15, 0.4)
+
+    &::before
+      opacity: 1
+
+  &:active
+    transform: translateY(1px)

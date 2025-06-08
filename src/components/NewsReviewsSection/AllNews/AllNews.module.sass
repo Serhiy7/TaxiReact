@@ -1,0 +1,67 @@
+/* AllNews.module.sass */
+.allNews
+  background-color: #0a0a0a
+  padding: 2rem
+  color: #f8f8f8
+  font-family: "Inter", sans-serif
+
+.title
+  text-align: center
+  margin-bottom: 2rem
+  font-size: 2rem
+
+.newsList
+  display: flex
+  flex-direction: column
+  gap: 1.5rem
+  max-width: 1200px
+  margin: 0 auto
+
+.newsItem
+  background: linear-gradient(145deg, #1e1e1e, #1a1a1a)
+  border: 1px solid rgba(63, 209, 15, 0.3)
+  border-radius: 12px
+  padding: 1.5rem
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
+  transition: transform 0.3s ease
+  &:hover
+    transform: translateY(-5px)
+
+.newsImage
+  width: 100%
+  height: 250px
+  object-fit: cover
+  border-radius: 8px
+  margin-bottom: 1rem
+
+.newsContent
+  h3
+    margin: 0 0 0.5rem 0
+    font-size: 1.5rem
+    color: #3fd10f
+
+  p
+    margin: 0 0 1rem 0
+    line-height: 1.6
+
+.newsMeta
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 1rem
+
+.date
+  color: #b3b3b3
+  font-size: 0.9rem
+
+.readMoreBtn
+  background: transparent
+  border: 1px solid #3fd10f
+  color: #3fd10f
+  padding: 0.5rem 1rem
+  border-radius: 4px
+  cursor: pointer
+  transition: all 0.3s ease
+  &:hover
+    background: #3fd10f
+    color: #0a0a0a

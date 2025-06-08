@@ -1,63 +1,144 @@
 .hero {
-  min-height: 80vh;
+  padding-top: 80px;
+  min-height: 100vh;
   position: relative;
-  background: none; /* убираем фон-картинку из hero */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #f8f8f8;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+  overflow: hidden;
 }
+
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(63, 209, 15, 0.1) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
   z-index: 1;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 1200px;
   padding: 0 20px;
-  text-align: center;
 }
+
 .hero-content h1 {
-  font-family: Oswald;
-  font-size: 66px;
+  font-family: "Oswald", sans-serif;
+  font-size: 4rem;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 1.2;
+  background: linear-gradient(90deg, #3fd10f, #fff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
+
 .hero-content p {
-  font-size: 35px;
+  font-size: 1.75rem;
   margin-bottom: 30px;
+  font-weight: 300;
 }
+
 .highlight {
   color: #3fd10f;
   font-weight: bold;
 }
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
 .btn-hero {
-  display: inline-block;
-  background-color: #3fd10f;
-  color: #1a1a1a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   padding: 15px 30px;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: background 0.3s, transform 0.3s;
+  transition: all 0.3s;
+  font-size: 1rem;
 }
+
+.btn-hero.primary {
+  background-color: #3fd10f;
+  color: #1a1a1a;
+}
+
+.btn-hero.secondary {
+  background-color: transparent;
+  color: #3fd10f;
+  border: 2px solid #3fd10f;
+}
+
 .btn-hero:hover {
-  background-color: #2e9a0a;
   transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
+
+.btn-hero.primary:hover {
+  background-color: #2e9a0a;
+}
+
+.btn-hero.secondary:hover {
+  background-color: rgba(63, 209, 15, 0.1);
+}
+
+.hero-features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.feature svg {
+  font-size: 1.5rem;
+  color: #3fd10f;
+}
+
 @media (max-width: 768px) {
   .hero-content h1 {
     font-size: 2.2rem;
   }
+
   .hero-content p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    gap: 15px;
   }
 }

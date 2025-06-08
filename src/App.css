@@ -1,4 +1,54 @@
+/* App.css */
+:root {
+  --header-height: 80px;
+  --header-height-mobile: 60px;
+  --footer-height: 70px;
+}
+/* Добавьте это в самый верх App.css */
+body {
+  --header-height: 80px;
+  --header-height-mobile: 60px;
+  --footer-height: 70px;
+  margin: 0;
+  padding: 0;
+}
+
 .main-container {
-  max-width: 1200px;
-  margin: 0 auto;
+  padding-top: 90px; /* 80px шапка + 10px отступ */
+  /* Основные стили */
+  padding-top: var(--header-height);
+  min-height: calc(100vh - var(--footer-height));
+
+  /* Плавные переходы для адаптива */
+  transition: padding-top 0.3s ease;
+
+  /* Оптимальные отступы по бокам */
+  padding-inline: clamp(1rem, 5vw, 3rem);
+
+  /* Улучшенная система выравнивания контента */
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+  .main-container {
+    padding-top: 70px; /* 60px шапка + 10px отступ */
+    padding-top: var(--header-height-mobile);
+    padding-inline: clamp(0.75rem, 3vw, 1.5rem);
+  }
+}
+
+/* Для устройств с большой высотой (например, некоторые смартфоны) */
+@media (max-height: 700px) and (max-width: 768px) {
+  .main-container {
+    padding-top: calc(var(--header-height-mobile) - 10px);
+  }
+}
+
+/* Поддержка prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .main-container {
+    transition: none;
+  }
 }

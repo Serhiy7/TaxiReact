@@ -1,4 +1,4 @@
-// import "./Advantages.css";
+
 
 const AdvantagesBox = () => {
   return (

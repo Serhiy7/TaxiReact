@@ -10,20 +10,17 @@ function App() {
   return (
     <>
       <Header />
-      <div className="main-container">
+      <main className="main-container">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="news" element={<NewsReviews />} />
           <Route path="cars" element={<Vehicle />} />
           <Route path="videos" element={<Videos />} />
         </Routes>
-      </div>
+      </main>
       <Footer />
     </>
   );
 }
 
 export default App;
-{
-  /* <Route path="/" element={<Home />} /> */
-}

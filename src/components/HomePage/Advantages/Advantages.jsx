@@ -8,7 +8,6 @@ const Advantages = () => {
       <section className="section advantages-section" id="advantages">
         <AdvaH2 />
         <AdvantagesBox />
-        <h2 className="carH2">Автопарк</h2>
       </section>
     </>
   );

@@ -1,4 +1,4 @@
-import "./Advantages.css";
+import "./Advantages.scss";
 import AdvaH2 from "./AdvantagesH2/AdvantagesH2";
 import AdvantagesBox from "./AdvantagesBox/AdvantagesBox";
 

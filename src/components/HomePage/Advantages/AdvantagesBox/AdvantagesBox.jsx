@@ -1,33 +1,32 @@
-
+import styles from "./AdvantagesBox.module.scss";
 
 const AdvantagesBox = () => {
   return (
-    <>
-      <div className="advantages-grid">
-        <div className="advantage-card">
-          <h3>Даем лучшие условия на рынке</h3>
-          <p>Нет залога и депозита на старте</p>
-          <p>Моментальный вывод, комиссия – 0,6%</p>
-        </div>
-        <div className="advantage-card">
-          <h3>С нами выгодно</h3>
-          <p>Нет штрафов за перепробег</p>
-          <p>На время сложного ремонта выдаем подменный авто</p>
-        </div>
-        <div className="advantage-card">
-          <h3>Работаем честно</h3>
-          <p>Простой и понятный договор</p>
-          <p>Нет скрытых платежей</p>
-        </div>
-        <div className="advantage-card">
-          <h3>С нами комфортно</h3>
-          <p>Поддержка 24/7 – отвечаем быстро и по делу</p>
-          <p>
-            Решаем споры с поддержкой Яндекса – мы отстаиваем позицию водителя
-          </p>
-        </div>
+    <div className={styles.advantagesGrid}>
+      <div className={styles.advantageCard}>
+        <h3>We offer the best conditions on the market</h3>
+        <p>No collateral or deposit required at the start</p>
+        <p>Instant withdrawals with a 0.6% commission</p>
       </div>
-    </>
+      <div className={styles.advantageCard}>
+        <h3>It's profitable with us</h3>
+        <p>No penalties for exceeding mileage</p>
+        <p>We provide a replacement car during complex repairs</p>
+      </div>
+      <div className={styles.advantageCard}>
+        <h3>We work honestly</h3>
+        <p>Simple and clear contract</p>
+        <p>No hidden fees</p>
+      </div>
+      <div className={styles.advantageCard}>
+        <h3>It's comfortable with us</h3>
+        <p>24/7 support – we respond quickly and to the point</p>
+        <p>
+          We resolve disputes with Yandex support – we stand up for the driver's
+          position
+        </p>
+      </div>
+    </div>
   );
 };
 

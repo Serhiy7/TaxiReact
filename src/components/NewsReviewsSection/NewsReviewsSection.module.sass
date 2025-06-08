@@ -148,9 +148,11 @@
   border-radius: 16px
   padding: 3rem 2rem
   margin: 4rem auto
+  max-width: 1400px
   border: 1px solid rgba(63, 209, 15, 0.1)
   position: relative
   overflow: hidden
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3)
 
   &::before
     content: ''
@@ -162,20 +164,28 @@
     background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSg2MywgMjA5LCAxNSwgMC4wMykiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')
 
 .statsTitle
-  font-size: 1.8rem
-  font-weight: 600
-  margin-bottom: 2rem
+  font-size: 2rem
+  font-weight: 700
+  margin-bottom: 3rem
   text-align: center
   color: #f8f8f8
   position: relative
-  z-index: 2
+
+  &::after
+    content: ''
+    position: absolute
+    bottom: -10px
+    left: 50%
+    transform: translateX(-50%)
+    width: 80px
+    height: 4px
+    background: linear-gradient(90deg, #3fd10f, #8ef77b)
+    border-radius: 4px
 
 .statsGrid
   display: grid
-  grid-template-columns: repeat(4, 1fr)
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
   gap: 2rem
-  max-width: 1200px
-  margin: 0 auto
   position: relative
   z-index: 2
 
@@ -188,15 +198,20 @@
 .statItem
   background: rgba(30, 30, 30, 0.6)
   border-radius: 12px
-  padding: 1.5rem
+  padding: 2rem 1rem
   border: 1px solid rgba(63, 209, 15, 0.1)
-  transition: all 0.3s ease
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.4, 1)
+  text-align: center
   backdrop-filter: blur(5px)
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1)
 
   &:hover
-    transform: translateY(-5px)
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2)
+    transform: translateY(-10px)
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2)
     border-color: rgba(63, 209, 15, 0.3)
+
+    .statValue
+      text-shadow: 0 0 10px rgba(63, 209, 15, 0.5)
 
 .statValue
   font-size: 2.5rem
@@ -208,7 +223,7 @@
   display: inline-block
 
 .statLabel
-  font-size: 1rem
+  font-size: 1.1rem
   color: rgba(248, 248, 248, 0.7)
   line-height: 1.5
 

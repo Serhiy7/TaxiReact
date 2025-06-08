@@ -1,40 +1,42 @@
-import "./Hero.css";
-import { FaCar, FaMoneyBillWave, FaCalendarAlt } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaCar, FaMoneyBillWave, FaCalendarAlt } from "react-icons/fa";
+import "./Hero.scss";
 
 const Hero = () => {
   return (
-    <>
-      <section className="hero" id="hero">
-        <div className="hero-content">
-          <h1>Аренда авто в Варшаве</h1>
-          <p>
-            Зарабатывайте от <span className="highlight">6 000</span> до <span className="highlight">8 000</span> zl <br /> в месяц на работе в такси
-          </p>
-          <div className="hero-buttons">
-            <a href="#autopark" className="btn-hero primary">
-              <FaCar /> Выбрать автомобиль
-            </a>
-            <a href="#tariffs" className="btn-hero secondary">
-              <FaMoneyBillWave /> Тарифы
-            </a>
+    <section className="hero" id="hero">
+      <div className="hero-content">
+        <h1>Car Rental in Warsaw</h1>
+        <p>
+          Earn from <span className="highlight">6,000</span> to{" "}
+          <span className="highlight">8,000</span> zł <br /> per month working
+          in a taxi
+        </p>
+        <div className="hero-buttons">
+          <Link to="/cars" className="btn-hero primary">
+            <FaCar /> Choose a Car
+          </Link>
+          <Link to="/tariffs" className="btn-hero secondary">
+            <FaMoneyBillWave /> Tariffs
+          </Link>
+        </div>
+        <div className="hero-features">
+          <div className="feature">
+            <FaCalendarAlt />
+            <span>Flexible rental terms</span>
           </div>
-          <div className="hero-features">
-            <div className="feature">
-              <FaCalendarAlt />
-              <span>Гибкие условия аренды</span>
-            </div>
-            <div className="feature">
-              <FaCar />
-              <span>Новые автомобили</span>
-            </div>
-            <div className="feature">
-              <FaMoneyBillWave />
-              <span>Высокая прибыль</span>
-            </div>
+          <div className="feature">
+            <FaCar />
+            <span>New cars</span>
+          </div>
+          <div className="feature">
+            <FaMoneyBillWave />
+            <span>High profit</span>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

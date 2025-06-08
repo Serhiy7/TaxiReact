@@ -1,4 +1,5 @@
-/* App.css */
+/* App.scss */
+
 :root {
   /* Размеры */
   --header-height: 80px;
@@ -37,12 +38,15 @@
 }
 
 /* Базовые стили */
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
 }
 
 html {
@@ -53,8 +57,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background-color: var(--color-dark);
   color: var(--color-light);
   line-height: 1.6;
@@ -64,12 +67,7 @@ body {
 }
 
 /* Типография */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0.75em;
@@ -83,10 +81,10 @@ a {
   color: var(--color-accent);
   text-decoration: none;
   transition: color var(--transition-fast);
-}
 
-a:hover {
-  color: var(--color-accent-tertiary);
+  &:hover {
+    color: var(--color-accent-tertiary);
+  }
 }
 
 /* Основной контейнер */
@@ -115,9 +113,7 @@ button {
 }
 
 /* Формы */
-input,
-textarea,
-select {
+input, textarea, select {
   font-family: inherit;
   background-color: var(--color-dark-tertiary);
   border: 1px solid rgba(63, 209, 15, 0.3);
@@ -125,14 +121,12 @@ select {
   padding: 0.75rem;
   border-radius: var(--radius-md);
   transition: all var(--transition-normal);
-}
 
-input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 2px rgba(63, 209, 15, 0.2);
+  &:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(63, 209, 15, 0.2);
+  }
 }
 
 /* Утилиты */
@@ -185,13 +179,19 @@ select:focus {
     scroll-behavior: auto;
   }
 
-  *,
-  *::before,
-  *::after {
+  * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+
+    &::before,
+    &::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -208,8 +208,8 @@ select:focus {
 ::-webkit-scrollbar-thumb {
   background: var(--color-accent);
   border-radius: var(--radius-full);
-}
 
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-accent-tertiary);
+  &:hover {
+    background: var(--color-accent-tertiary);
+  }
 }

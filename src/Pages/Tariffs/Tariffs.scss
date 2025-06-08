@@ -1,0 +1,83 @@
+/* Tariffs.scss */
+
+.tariffs {
+  padding: 4rem 0;
+  background-color: var(--color-dark-secondary);
+
+  h2 {
+    margin-bottom: 2rem;
+    color: var(--color-light);
+  }
+}
+
+.tariffs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.tariff-card {
+  background-color: var(--color-dark-tertiary);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+
+  .tariff-icon {
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+
+  .tariff-price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin: 1rem 0;
+  }
+
+  .tariff-description {
+    margin-bottom: 1.5rem;
+    color: var(--color-light-secondary);
+  }
+
+  .tariff-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+
+    li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.25rem;
+      position: relative;
+
+      &::before {
+        content: "✓";
+        color: var(--color-accent);
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+}
+
+.btn-tariff {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color var(--transition-normal);
+
+  &:hover {
+    background-color: var(--color-accent-tertiary);
+  }
+}

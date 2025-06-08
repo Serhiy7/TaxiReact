@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerLeft}>
-        <p className={styles.title}>Аренда авто под такси в Варшаве</p>
+        <p className={styles.title}>Car Rental for Taxis in Warsaw</p>
         <p className={styles.contact}>
-          Свяжитесь с нами:
+          Contact Us:
           <a href="tel:+48123456789" className={styles.link}>
             +48 123 456 789
           </a>
@@ -16,7 +16,7 @@ const Footer = () => {
           </a>
         </p>
         <p className={styles.copyright}>
-          © 2025 Аренда авто под такси в Варшаве. Все права защищены.
+          © 2025 Car Rental for Taxis in Warsaw. All rights reserved.
         </p>
       </div>
       <div className={styles.footerRight}>
@@ -39,10 +39,16 @@ const Footer = () => {
           </a>
         </div>
         <p className={styles.info}>
-          Адрес: ул. Примерная, 10, Варшава
+          Address: 10 Example Street, Warsaw
           <br />
-          График работы: Пн–Пт с 9:00 до 18:00
+          Working Hours: Mon–Fri from 9:00 AM to 6:00 PM
         </p>
+      </div>
+      <div className={styles.additionalInfo}>
+        <p className={styles.motto}>
+          Your trusted partner for taxi car rentals in Warsaw.
+        </p>
+        
       </div>
     </footer>
   );

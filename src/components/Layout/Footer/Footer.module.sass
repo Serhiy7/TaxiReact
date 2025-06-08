@@ -1,92 +1,117 @@
-// Define colors in SASS
-$color-tertiary: #4a4a4a // Example color value
-$color-action: #ff5733 // Example color value
-$color-secondary: #33ff57 // Example color value
+/* Footer.module.sass */
+:root
+  --color-dark-tertiary: #1e1e1e
+  --color-dark-tertiary-light: #2a2a2a
+  --color-dark-tertiary-dark: #121212
 
 .footer
-  background: linear-gradient(135deg, $color-tertiary, darken($color-tertiary, 10%))
-  padding: 30px
+  background: linear-gradient(135deg, var(--color-dark-tertiary), var(--color-dark-tertiary-dark))
+  padding: 40px 30px
   display: flex
   flex-wrap: wrap
   justify-content: space-between
-  align-items: center
-  color: var(--color-primary)
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1)
-  border-radius: 10px 10px 0 0
+  align-items: flex-start
+  color: var(--color-light)
+  box-shadow: var(--shadow-md)
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0
 
-.footerLeft, .footerRight
-  flex: 1 1 300px
-  margin: 15px
+  &Left, &Right
+    flex: 1 1 300px
+    margin: 15px
 
-.title
-  font-size: 1.5rem
-  margin-bottom: 15px
-  font-weight: bold
-  position: relative
-  padding-bottom: 10px
-  &::after
-    content: ''
-    position: absolute
-    bottom: 0
-    left: 0
-    width: 50px
-    height: 3px
-    background: $color-action
-
-.contact, .info
-  font-size: 1.1rem
-  margin-bottom: 15px
-
-.copyright
-  font-size: 1rem
-  color: #aaa
-
-.link
-  color: $color-action
-  text-decoration: none
-  margin: 0 8px
-  transition: all 0.3s ease
-  position: relative
-  &::after
-    content: ''
-    position: absolute
-    width: 0
-    height: 2px
-    bottom: -3px
-    left: 0
-    background-color: $color-action
-    transition: width 0.3s ease
-  &:hover
-    color: $color-secondary
+  .title
+    font-size: 1.5rem
+    margin-bottom: 15px
+    font-weight: bold
+    position: relative
+    padding-bottom: 10px
     &::after
-      width: 100%
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 50px
+      height: 3px
+      background: var(--color-accent)
 
-.socialIcons
-  display: flex
-  justify-content: flex-end
-  gap: 20px
-  margin-bottom: 15px
+  .contact, .info
+    font-size: 1.1rem
+    margin-bottom: 15px
 
-.socialLink
-  color: $color-action
-  transition: all 0.3s ease
-  font-size: 1.8rem
-  &:hover
-    color: $color-secondary
-    transform: translateY(-3px)
+  .copyright
+    font-size: 1rem
+    color: var(--color-light-secondary)
 
-// Dark theme styles
+  .link
+    color: var(--color-accent)
+    text-decoration: none
+    margin: 0 8px
+    transition: all var(--transition-normal) ease
+    position: relative
+    &::after
+      content: ""
+      position: absolute
+      width: 0
+      height: 2px
+      bottom: -3px
+      left: 0
+      background-color: var(--color-accent)
+      transition: width var(--transition-normal) ease
+    &:hover
+      color: var(--color-accent-tertiary)
+      &::after
+        width: 100%
+
+  .socialIcons
+    display: flex
+    justify-content: flex-end
+    gap: 20px
+    margin-bottom: 15px
+
+  .socialLink
+    color: var(--color-accent)
+    transition: all var(--transition-normal) ease
+    font-size: 1.8rem
+    &:hover
+      color: var(--color-accent-tertiary)
+      transform: translateY(-3px)
+
+  .additionalInfo
+    width: 100%
+    text-align: center
+    margin-top: 20px
+    padding-top: 20px
+    border-top: 1px solid var(--color-light-secondary)
+
+    .motto
+      font-size: 1.2rem
+      margin-bottom: 15px
+      color: var(--color-light-secondary)
+
+    .quickLinks
+      display: flex
+      justify-content: center
+      gap: 20px
+
+      .quickLink
+        color: var(--color-light)
+        text-decoration: none
+        transition: color var(--transition-normal) ease
+        &:hover
+          color: var(--color-accent-tertiary)
+
 .darkTheme
   .footer
-    background: linear-gradient(135deg, $color-tertiary, lighten($color-tertiary, 10%))
+    background: linear-gradient(135deg, var(--color-dark-tertiary), var(--color-dark-tertiary-light))
 
-// Mobile responsiveness
 @media (max-width: 768px)
   .footer
     flex-direction: column
     text-align: center
-  .footerLeft, .footerRight
-    text-align: center
-    max-width: 100%
+
+    &Left, &Right
+      text-align: center
+      max-width: 100%
+
   .socialIcons
     justify-content: center

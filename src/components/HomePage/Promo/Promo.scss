@@ -1,25 +1,27 @@
+/* Promo.scss */
+
 .promo {
   padding: 80px 20px;
   background: linear-gradient(135deg, #1e1e1e 0%, #1a1a1a 100%);
   color: #f8f8f8;
   text-align: center;
-}
 
-.promo-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+  .promo-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
-.promo h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-  color: #3fd10f;
-}
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #3fd10f;
+  }
 
-.promo p {
-  font-size: 1.2rem;
-  margin-bottom: 40px;
-  color: #ccc;
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #ccc;
+  }
 }
 
 .promo-offer {
@@ -38,27 +40,27 @@
   align-items: center;
   gap: 20px;
   transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.offer-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 
-.offer-icon {
-  font-size: 2.5rem;
-  color: #3fd10f;
-  flex-shrink: 0;
-}
+  .offer-icon {
+    font-size: 2.5rem;
+    color: #3fd10f;
+    flex-shrink: 0;
+  }
 
-.offer-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 5px;
-}
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+  }
 
-.offer-item p {
-  font-size: 1rem;
-  color: #ccc;
+  p {
+    font-size: 1rem;
+    color: #ccc;
+  }
 }
 
 .btn-promo {
@@ -73,21 +75,23 @@
   transition: all 0.3s;
   font-size: 1.1rem;
   margin-top: 20px;
-}
 
-.btn-promo:hover {
-  background-color: #2e9a0a;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  &:hover {
+    background-color: #2e9a0a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (max-width: 768px) {
-  .promo h2 {
-    font-size: 2rem;
-  }
+  .promo {
+    h2 {
+      font-size: 2rem;
+    }
 
-  .promo p {
-    font-size: 1rem;
+    p {
+      font-size: 1rem;
+    }
   }
 
   .offer-item {

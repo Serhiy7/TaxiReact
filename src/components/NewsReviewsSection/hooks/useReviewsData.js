@@ -1,83 +1,84 @@
-// useReviewsData.js
 import { useState } from "react";
 
 export const useReviewsData = () => {
   const [reviews] = useState([
     {
       id: 1,
-      title: "Отличный сервис!",
-      content: "Очень доволен качеством обслуживания и автомобилями.",
-      author: "Иван И.",
+      title: "Excellent service!",
+      content: "Very satisfied with the quality of service and the cars.",
+      author: "Ivan I.",
       rating: 5,
       avatar: "/images/reviews/ivan.jpg",
       fullContent:
-        "Очень доволен качеством обслуживания и автомобилями. Все было на высшем уровне, рекомендую!",
+        "Very satisfied with the quality of service and the cars. Everything was top-notch, highly recommend!",
       date: "10.06.2025",
     },
     {
       id: 2,
-      title: "Быстрое оформление",
-      content: "Быстро оформили документы, машина в отличном состоянии.",
-      author: "Мария К.",
+      title: "Quick paperwork",
+      content:
+        "The paperwork was done quickly, the car is in excellent condition.",
+      author: "Maria K.",
       rating: 4,
       avatar: "/images/reviews/maria.jpg",
       fullContent:
-        "Быстро оформили документы, машина в отличном состоянии. Небольшие замечания по чистоте салона, но в целом все отлично.",
+        "The paperwork was done quickly, the car is in excellent condition. Minor comments on the cleanliness of the interior, but overall everything is great.",
       date: "05.06.2025",
     },
     {
       id: 3,
-      title: "Удобный сервис",
-      content: "Очень удобно и быстро. Все понравилось!",
-      author: "Алексей С.",
+      title: "Convenient service",
+      content: "Very convenient and fast. Everything was great!",
+      author: "Alexey S.",
       rating: 5,
       avatar: "/images/reviews/alexey.jpg",
       fullContent:
-        "Очень удобно и быстро. Все понравилось! Особенно впечатлило отношение персонала и скорость оформления.",
+        "Very convenient and fast. Everything was great! Especially impressed with the staff's attitude and the speed of processing.",
       date: "01.06.2025",
     },
     {
       id: 4,
-      title: "Надежные автомобили",
-      content: "Автомобили в отличном состоянии, все работает как часы.",
-      author: "Ольга П.",
+      title: "Reliable cars",
+      content:
+        "The cars are in excellent condition, everything works like clockwork.",
+      author: "Olga P.",
       rating: 5,
       avatar: "/images/reviews/olga.jpg",
       fullContent:
-        "Автомобили в отличном состоянии, все работает как часы. Очень довольна выбором и сервисом.",
+        "The cars are in excellent condition, everything works like clockwork. Very satisfied with the choice and service.",
       date: "28.05.2025",
     },
     {
       id: 5,
-      title: "Неудовлетворен сервисом",
-      content: "Долгое ожидание и неудобное расположение офиса.",
-      author: "Дмитрий В.",
+      title: "Dissatisfied with the service",
+      content: "Long wait and inconvenient office location.",
+      author: "Dmitry V.",
       rating: 2,
       avatar: "/images/reviews/dmitry.jpg",
       fullContent:
-        "Долгое ожидание и неудобное расположение офиса. Машина была не очень чистой, и персонал не особо помогал.",
+        "Long wait and inconvenient office location. The car was not very clean, and the staff were not very helpful.",
       date: "20.05.2025",
     },
     {
       id: 6,
-      title: "Проблемы с автомобилем",
-      content: "Автомобиль сломался через два дня использования.",
-      author: "Анна Т.",
+      title: "Problems with the car",
+      content: "The car broke down after two days of use.",
+      author: "Anna T.",
       rating: 1,
       avatar: "/images/reviews/anna.jpg",
       fullContent:
-        "Автомобиль сломался через два дня использования. Сервис не отреагировал оперативно на мою жалобу.",
+        "The car broke down after two days of use. The service did not respond promptly to my complaint.",
       date: "15.05.2025",
     },
     {
       id: 7,
-      title: "Хороший сервис, но есть недостатки",
-      content: "В целом хорошо, но были проблемы с бронированием.",
-      author: "Сергей Н.",
+      title: "Good service, but there are drawbacks",
+      content: "Overall good, but there were issues with booking.",
+      author: "Sergey N.",
       rating: 3,
       avatar: "/images/reviews/sergey.jpg",
       fullContent:
-        "В целом хорошо, но были проблемы с бронированием. Пришлось ждать дополнительное время, чтобы получить машину.",
+        "Overall good, but there were issues with booking. Had to wait extra time to get the car.",
       date: "10.05.2025",
     },
   ]);

@@ -1,38 +1,18 @@
-/* Advantages.scss */
-
 .advantages-section {
-  background-color: var(--color-dark);
-  padding: calc(var(--header-height) + 20px) 20px 40px;
-  font-family: "Inter", sans-serif;
+  --section-padding: 6rem;
 
-  @media (max-width: 768px) {
-    padding: calc(var(--header-height-mobile) + 15px) 15px 20px;
-  }
-}
-
-.advantages-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.advantage-card {
-  background: linear-gradient(
-    145deg,
-    var(--color-dark-tertiary),
-    var(--color-dark-secondary)
-  );
-  color: var(--color-light);
-  border: 1px solid rgba(63, 209, 15, 0.3);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  padding: 2rem;
-  transition: all var(--transition-normal) var(--transition-bounce);
   position: relative;
+  background: radial-gradient(
+      ellipse at center,
+      var(--color-dark-primary) 0%,
+      var(--color-dark-secondary) 100%
+    ),
+    url("path/to/subtle-pattern.png") center/cover fixed;
+  padding: calc(var(--header-height) + var(--section-padding)) 0
+    var(--section-padding);
   overflow: hidden;
-  backdrop-filter: blur(4px);
+  font-family: "Inter", system-ui, sans-serif;
+  isolation: isolate;
 
   &::before {
     content: "";
@@ -40,81 +20,99 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 4px;
+    height: 100%;
     background: linear-gradient(
-      90deg,
-      var(--color-accent),
-      var(--color-accent-secondary)
+      135deg,
+      rgba(var(--color-accent-rgb), 0.05) 0%,
+      rgba(var(--color-accent-rgb), 0) 50%
     );
+    z-index: -1;
   }
 
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(63, 209, 15, 0.6);
+  @media (max-width: 1200px) {
+    --section-padding: 5rem;
+    background-attachment: scroll;
   }
 
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--color-light);
-    font-weight: 700;
-    position: relative;
-    padding-bottom: 0.625rem;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 50px;
-      height: 3px;
-      background: linear-gradient(
-        90deg,
-        var(--color-accent),
-        var(--color-accent-secondary)
-      );
-    }
-  }
-
-  p {
-    font-size: 1.1rem;
-    margin-bottom: 1.25rem;
-    line-height: 1.6;
-    color: var(--color-light-secondary);
+  @media (max-width: 992px) {
+    --section-padding: 4rem;
   }
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    --section-padding: 3.5rem;
+    padding: calc(var(--header-height-mobile) + var(--section-padding)) 0
+      var(--section-padding);
+  }
+
+  @media (max-width: 576px) {
+    --section-padding: 3rem;
   }
 }
 
-.carH2 {
-  padding: 5rem 0 2.5rem;
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--color-light);
-  font-weight: 800;
+.advantages-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
   position: relative;
-  margin-top: 2.5rem;
 
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(
-      90deg,
-      var(--color-accent),
-      var(--color-accent-secondary)
-    );
+  @media (max-width: 1200px) {
+    padding: 0 1.75rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 2rem;
-    padding: 3.75rem 0 1.875rem;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 1.25rem;
+  }
+}
+
+// Animation classes
+[data-aos] {
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.aos-animate {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+.advantages-section[data-aos="fade-in"] {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+// Responsive grid fallbacks
+@media (max-width: 640px) {
+  .advantages-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .advantage-card {
+    padding: 1.75rem 1.5rem !important;
+
+    h3 {
+      font-size: 1.4rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .advantages-container {
+    padding: 0 1rem;
+  }
+
+  .advantage-card {
+    padding: 1.5rem 1.25rem !important;
+
+    h3 {
+      font-size: 1.3rem !important;
+    }
   }
 }

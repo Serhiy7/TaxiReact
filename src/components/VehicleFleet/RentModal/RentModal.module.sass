@@ -1,0 +1,72 @@
+/* RentModal.module.sass */
+
+.modalOverlay
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: rgba(0, 0, 0, 0.7)
+  display: flex
+  justify-content: center
+  align-items: center
+  z-index: 1000
+
+.modalContent
+  background: var(--color-dark-secondary)
+  padding: 2rem
+  border-radius: var(--radius-md)
+  box-shadow: var(--shadow-lg)
+  width: 90%
+  max-width: 500px
+  position: relative
+
+.closeButton
+  position: absolute
+  top: 1rem
+  right: 1rem
+  background: none
+  border: none
+  font-size: 1.5rem
+  cursor: pointer
+  color: var(--color-light)
+
+.modalTitle
+  text-align: center
+  color: var(--color-light)
+  font-size: 2rem
+  margin-bottom: 1.5rem
+
+.formGroup
+  margin-bottom: 1.5rem
+  label
+    display: block
+    margin-bottom: 0.5rem
+    color: var(--color-light)
+  input
+    width: 100%
+    padding: 0.75rem
+    border-radius: var(--radius-sm)
+    border: 1px solid rgba(63, 209, 15, 0.3)
+    background-color: var(--color-dark-tertiary)
+    color: var(--color-light)
+    transition: border-color var(--transition-normal)
+    &:focus
+      outline: none
+      border-color: var(--color-accent)
+      box-shadow: 0 0 0 2px rgba(63, 209, 15, 0.2)
+
+.submitButton
+  width: 100%
+  padding: 0.75rem
+  background-color: var(--color-accent)
+  color: var(--color-dark)
+  border: none
+  border-radius: var(--radius-sm)
+  font-weight: 700
+  cursor: pointer
+  transition: background var(--transition-normal), transform var(--transition-normal)
+  font-size: 1rem
+  &:hover
+    background-color: var(--color-accent-secondary)
+    transform: translateY(-3px)

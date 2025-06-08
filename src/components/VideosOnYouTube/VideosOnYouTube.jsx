@@ -1,7 +1,7 @@
 import styles from "./VideosOnYouTube.module.sass";
 
 /**
- * Компонент отображает ТОП-7 песен Miyagi в виде встроенных YouTube видео.
+ * Component displays the TOP-7 songs by Miyagi as embedded YouTube videos.
  * @component
  * @returns {JSX.Element}
  */
@@ -11,14 +11,13 @@ const VideosOnYouTube = () => {
       id: "7pdN18RfGQw",
       title: "Ollane feat. Miyagi - Touch The Sky (Official Audio)",
     },
-
     {
       id: "4Ua1g8hU81A",
       title: "Miyagi - Captain (2018)",
     },
     {
       id: "jJpKYZs6Av0",
-      title: "Miyagi - Самурай (Official Audio)",
+      title: "Miyagi - Samurai (Official Audio)",
     },
     {
       id: "vN12KY7eR8U",
@@ -30,7 +29,7 @@ const VideosOnYouTube = () => {
     },
     {
       id: "xZEVGJszvo0",
-      title: "Miyagi & Эндшпиль - Bounty (Official Audio)",
+      title: "Miyagi & Endshpil - Bounty (Official Audio)",
     },
     {
       id: "DTz5k-8AzJo",
@@ -42,18 +41,18 @@ const VideosOnYouTube = () => {
     },
     {
       id: "af_Fnq39WQk",
-      title: "Miyagi & Эндшпиль - RudeBoys (Official Audio)",
+      title: "Miyagi & Endshpil - RudeBoys (Official Audio)",
     },
     {
       id: "nidQCt_HEsY",
-      title: "Miyagi & Эндшпиль feat. Рем Дигга - I Got Love (Official Video)",
+      title: "Miyagi & Endshpil feat. Rem Digga - I Got Love (Official Video)",
     },
   ];
 
   return (
     <section className={styles.videoSection} id="video">
       <h2>Miyagi</h2>
-      <h3>ТОП песени :</h3>
+      <h3>Top Songs:</h3>
 
       <div className={styles.videoWrapper}>
         <iframe

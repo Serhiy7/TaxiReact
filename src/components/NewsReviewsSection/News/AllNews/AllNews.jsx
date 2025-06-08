@@ -25,9 +25,9 @@ const AllNews = () => {
   return (
     <div className={styles.allNews}>
       <button onClick={goBack} className={styles.backButton}>
-        <BackArrowIcon /> Назад
+        <BackArrowIcon /> Back
       </button>
-      <h2 className={styles.title}>Все новости</h2>
+      <h2 className={styles.title}>All News</h2>
       <div className={styles.newsList}>
         {news.map((item) => (
           <FeaturedItem

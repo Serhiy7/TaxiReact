@@ -11,10 +11,10 @@ const NewsReviewsSection = () => {
   const { reviews } = useReviewsData();
 
   const stats = [
-    { value: "150+", label: "Автомобилей в парке" },
-    { value: "98%", label: "Довольных клиентов" },
-    { value: "24/7", label: "Поддержка" },
-    { value: "5 лет", label: "На рынке" },
+    { value: "150+", label: "Cars in fleet" },
+    { value: "98%", label: "Satisfied clients" },
+    { value: "24/7", label: "Support" },
+    { value: "5 years", label: "On the market" },
   ];
 
   const handleReadNews = (newsItem) =>
@@ -31,18 +31,18 @@ const NewsReviewsSection = () => {
   return (
     <section className={styles.newsReviewsSection} id="news">
       <div className={styles.sectionHeader}>
-        <h2>Новости и отзывы</h2>
+        <h2>News and Reviews</h2>
         <p className={styles.sectionSubtitle}>
-          Будьте в курсе последних событий и мнений наших клиентов
+          Stay updated with the latest news and opinions from our clients
         </p>
       </div>
 
       <div className={styles.contentWrapper}>
         <div className={styles.newsList}>
           <div className={styles.sectionTitle}>
-            <h3>Последние новости</h3>
+            <h3>Latest News</h3>
             <button onClick={handleAllNews} className={styles.viewAllBtn}>
-              Все новости →
+              All News →
             </button>
           </div>
           {displayedNews.map((item) => (
@@ -57,9 +57,9 @@ const NewsReviewsSection = () => {
 
         <div className={styles.reviewsList}>
           <div className={styles.sectionTitle}>
-            <h3>Отзывы клиентов</h3>
+            <h3>Customer Reviews</h3>
             <button onClick={handleAllReviews} className={styles.viewAllBtn}>
-              Все отзывы →
+              All Reviews →
             </button>
           </div>
           {displayedReviews.map((item) => (
@@ -74,7 +74,7 @@ const NewsReviewsSection = () => {
       </div>
 
       <div className={styles.statsSection}>
-        <h3 className={styles.statsTitle}>Наши достижения</h3>
+        <h3 className={styles.statsTitle}>Our Achievements</h3>
         <div className={styles.statsGrid}>
           {stats.map((stat, index) => (
             <div key={index} className={styles.statItem}>
@@ -86,10 +86,10 @@ const NewsReviewsSection = () => {
       </div>
 
       <div className={styles.ctaSection}>
-        <h3>Хотите оставить отзыв?</h3>
-        <p>Поделитесь своим опытом работы с нами</p>
+        <h3>Want to leave a review?</h3>
+        <p>Share your experience with us</p>
         <button onClick={handleWriteReview} className={styles.ctaButton}>
-          Написать отзыв
+          Write a Review
         </button>
       </div>
     </section>

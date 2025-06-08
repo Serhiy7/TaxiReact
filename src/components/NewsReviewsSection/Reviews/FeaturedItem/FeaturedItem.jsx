@@ -16,8 +16,8 @@ const FeaturedItem = ({ item, type, onReadMore, showFullContent = false }) => {
         <p>{showFullContent ? item.fullContent : item.content}</p>
         {showFullContent && (
           <>
-            <p>Автор: {item.author}</p>
-            <p>Дата: {item.date}</p>
+            <p>Author: {item.author}</p>
+            <p>Date: {item.date}</p>
           </>
         )}
         <div className={styles.meta}>
@@ -39,7 +39,7 @@ const FeaturedItem = ({ item, type, onReadMore, showFullContent = false }) => {
               onClick={() => onReadMore(item)}
               className={styles.readMoreBtn}
             >
-              {type === "news" ? "Читать подробнее" : "Читать полностью"}
+              {type === "news" ? "Read more" : "Read full review"}
             </button>
           )}
         </div>

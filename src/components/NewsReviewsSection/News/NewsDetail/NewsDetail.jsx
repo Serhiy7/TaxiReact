@@ -26,7 +26,7 @@ const NewsDetail = () => {
   const { newsItem } = location.state || {};
 
   if (!newsItem) {
-    return <div className={styles.notFound}>Новость не найдена.</div>;
+    return <div className={styles.notFound}>News not found.</div>;
   }
 
   const { id, title, date, image, content, fullContent, gallery, tags, type } =
@@ -39,7 +39,7 @@ const NewsDetail = () => {
   return (
     <div className={styles.newsDetail}>
       <button onClick={goBack} className={styles.backButton}>
-        <BackArrowIcon /> Назад
+        <BackArrowIcon /> Back
       </button>
 
       <div className={styles.header}>
@@ -54,13 +54,13 @@ const NewsDetail = () => {
       {image && <img src={image} alt={title} className={styles.mainImage} />}
 
       <div className={styles.contentSection}>
-        <h3>Краткое описание:</h3>
+        <h3>Brief Description:</h3>
         <p className={styles.content}>{content}</p>
       </div>
 
       {fullContent && (
         <div className={styles.fullContent}>
-          <h3>Подробное описание:</h3>
+          <h3>Detailed Description:</h3>
           {Array.isArray(fullContent) ? (
             fullContent.map((text, index) => (
               <p key={index} className={styles.paragraph}>
@@ -75,13 +75,13 @@ const NewsDetail = () => {
 
       {gallery?.length > 0 && (
         <div className={styles.gallery}>
-          <h3>Галерея ({gallery.length} фото)</h3>
+          <h3>Gallery ({gallery.length} photos)</h3>
           <div className={styles.galleryImages}>
             {gallery.map((src, index) => (
               <img
                 key={index}
                 src={src}
-                alt={`${title} - фото ${index + 1}`}
+                alt={`${title} - photo ${index + 1}`}
                 className={styles.galleryImage}
               />
             ))}
@@ -91,7 +91,7 @@ const NewsDetail = () => {
 
       {tags?.length > 0 && (
         <div className={styles.tags}>
-          <h3>Теги:</h3>
+          <h3>Tags:</h3>
           <div className={styles.tagsContainer}>
             {tags.map((tag, i) => (
               <span key={i} className={styles.tag}>

@@ -13,16 +13,16 @@ const WriteReview = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Здесь логика отправки отзыва
+    // Logic to submit the review
     navigate("/");
   };
 
   return (
     <div className={styles.writeReview}>
-      <h2>Написать отзыв</h2>
+      <h2>Write a Review</h2>
       <form onSubmit={handleSubmit}>
-        {/* Поля формы */}
-        <button type="submit">Отправить отзыв</button>
+        {/* Form fields */}
+        <button type="submit">Submit Review</button>
       </form>
     </div>
   );

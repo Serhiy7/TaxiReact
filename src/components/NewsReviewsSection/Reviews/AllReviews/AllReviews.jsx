@@ -14,9 +14,9 @@ const AllReviews = () => {
   return (
     <div className={styles.allReviews}>
       <button onClick={goBack} className={styles.backButton}>
-        ← Назад
+        ← Back
       </button>
-      <h2 className={styles.title}>Все отзывы</h2>
+      <h2 className={styles.title}>All Reviews</h2>
       <div className={styles.reviewsList}>
         {reviews.map((item) => (
           <div key={item.id} className={styles.reviewCard}>
@@ -42,11 +42,9 @@ const AllReviews = () => {
                 </div>
               </div>
 
-              <p className={styles.author}>Автор: {item.author}</p>
-              <p className={styles.date}>Дата: {item.date}</p>
-              {/* Добавлено отображение краткого содержания */}
+              <p className={styles.author}>Author: {item.author}</p>
+              <p className={styles.date}>Date: {item.date}</p>
               <p className={styles.content}>{item.content}</p>
-              {/* Добавлена кнопка для чтения полного отзыва */}
             </div>
           </div>
         ))}
